@@ -1,0 +1,164 @@
+body {
+    border: 2px solid red;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: seashell;
+    margin: 0;
+    text-align: center;
+}
+
+.titel {
+    width: 90%; /*height wordt automatisch ingesteld afhankelijk van de font-size*/
+    margin: auto;
+    font-size: 2rem;
+}
+
+.container {
+    border: 1px solid darkgrey;
+    background-color: rgb(247, 154, 89);
+    margin: 2% 5%;
+    width: 90%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flex-container {
+    border: 1px solid darkgrey;
+    background-color: rgb(247, 154, 89);
+    width: 90%; /*door geen height in te stellen, past de hoogte van de container zich aan, aan de hoogte van de flex-items; dmv % past het block zich aan aan de browser grootte*/
+    display: flex; /*deze flex-container bezet 1 regel, er komen geen andere flex containers op deze regel*/
+    flex-wrap: wrap;
+    flex-direction: row; /*bepaalt in welke richting de flex-items in de container uitgelijnd worden. ROW is de default waarde*/
+    margin: 2% 5%;
+}
+
+.flex-container2 {
+    border: 1px solid rgb(50, 22, 209);
+    background-color: rgb(247, 154, 89);
+    width: auto; /*door geen height in te stellen, past de hoogte van de container zich aan, aan de hoogte van de flex-items; dmv % past het block zich aan aan de browser grootte*/
+    height: max-content; /*de hoogte van de container is niet meer dan nodig voor de inhoud */
+    display: inline-flex; /*deze flex-container bestaat inline, er kunnen andere flex containers op deze regel verschijnen*/
+    flex-wrap: wrap;
+    flex-direction: row; /*bepaalt in welke richting de flex-items in de container uitgelijnd worden*/
+    margin: 2% 2%; /*dit zijn de marges van de container*/
+}
+
+.flex-container3 {
+    border: 1px solid darkgrey;
+    background-color: rgb(247, 154, 89);
+    width: max-content;  /*de breedte van de container is niet meer dan nodig voor de inhoud */
+    display: inline-flex; 
+    flex-wrap: wrap;
+    flex-direction: column; 
+    margin: 2% 2%; 
+    clear: both;
+    justify-content: center;
+}
+
+.box {
+    width: 20%;
+    min-width: 100px;
+    height: 100px;
+    margin: 10px ; /*dit creeert een boven en onder marge, dmv auto worden de flex items verdeeld over de flex-container*/
+    border: 2px solid red;
+    background-color: rgb(50, 131, 252);
+    display: flex; /* alle flexitems in containers van de class .box kunnen op dezelfde regel verschijnen, voor zover er ruimte in de het parent element is*/
+    align-items: center; /*lijnt items in de box verticaal uit*/
+    flex-wrap: wrap;
+}
+
+#box1 {
+    margin: 2%;
+    flex-grow: 1; /*flex-grow zorgt ervoor dat een flex-item groter wordt. op deze manier kun je de hele flex container vullen*/
+}
+
+#box2 {
+    margin: 2%;
+    flex-grow: 2;
+}
+
+#box3 {
+    margin: 2%;
+    flex-shrink: 1; /*flex-shrink hoeft alleen gedeclareerd te worden, als je een flex-item meer wilt laten krimpen dan de standaard waarde 1*/
+}
+
+.flex-container4 {
+    width: 90%;
+    margin: 2% 5%;
+    display: flex;
+    border: 1px solid darkgrey;
+    background-color: rgb(247, 154, 89);
+    overflow: hidden;
+    justify-content: flex-start; /*werkt alleen wanneer de marges van de flex-items fixed zijn*/
+}
+
+.boxs {
+    height: 100px;
+    min-width: 100px;
+    width: 20%;
+    background-color: dodgerblue;
+    margin: 10px;
+    border: 2px solid red;
+    align-items: center;
+    display: flex;
+  }
+
+#jcflex-start {
+    justify-content: flex-start;
+}
+
+#jcflex-end {
+    justify-content: flex-end;
+}
+
+#jccenter {
+    justify-content: center;
+}
+
+#jcspace-around {
+    justify-content: space-around;
+}
+
+#jcspace-between {
+    justify-content: space-between;
+}
+
+.flex-container5 {
+    background-color: rgb(247, 154, 89);
+    border: 1px solid darkgrey;
+    height: 350px;
+    width: 90%;
+    background-color: (247, 154, 89);
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 2% auto;
+  }
+
+#acflex-start {
+    align-content: flex-start;
+}
+
+#acflex-end {
+    align-content: flex-end;
+}
+
+#accenter {
+    align-content: center;
+}
+
+#acspace-between {
+    align-content: space-between;
+}
+
+#acspace-around {
+    align-content: space-around;
+}
+
+.box h1,
+ .box h2,
+  .boxs h1,
+   .boxs h2{
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
