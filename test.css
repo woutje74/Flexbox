@@ -49,7 +49,7 @@ body {
     width: max-content;  /*de breedte van de container is niet meer dan nodig voor de inhoud */
     display: inline-flex; 
     flex-wrap: wrap;
-    flex-direction: column; 
+    flex-direction: column; /* shorthand code voor wrap en direction is flex-flow: column wrap */
     margin: 2% 2%; 
     clear: both;
     justify-content: center;
@@ -59,11 +59,10 @@ body {
     width: 20%;
     min-width: 100px;
     height: 100px;
-    margin: 10px ; /*dit creeert een boven en onder marge, dmv auto worden de flex items verdeeld over de flex-container*/
+    margin: 10px; /*dit creeert een marge van 10px rond de box items, bij gebruik van auto worden de flex items verdeeld over de flex-container. Als deze geen fixed width heeft, verdwijnen de marges bij gebruik van auto*/
     border: 2px solid red;
     background-color: rgb(50, 131, 252);
     display: flex; /* alle flexitems in containers van de class .box kunnen op dezelfde regel verschijnen, voor zover er ruimte in de het parent element is*/
-    align-items: center; /*lijnt items in de box verticaal uit*/
     flex-wrap: wrap;
 }
 
@@ -80,6 +79,12 @@ body {
 #box3 {
     margin: 2%;
     flex-shrink: 1; /*flex-shrink hoeft alleen gedeclareerd te worden, als je een flex-item meer wilt laten krimpen dan de standaard waarde 1*/
+}
+
+#box4 {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .flex-container4 {
