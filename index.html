@@ -9,88 +9,110 @@
             <h1 class="titel">Testpage flexboxes</h1>
         </header>
         <main>
-            <div><h2>Flex grow and flex shrink</h2></div>
-            <div class="flex-container">
-                <div class="box" id="box1"><h1>BOX 1: grow 1</h1></div>
-                <div class="box" id="box2"><h1>BOX 2: grow 2</h1></div>
-                <div class="box" id="box3"><h1>BOX 3: shrink</h1></div>
-            </div>
-            <div><h2>Flex-direction</h2></div>
-            <div class="container">
-                <div class="flex-container2">
-                    <div class="box" id="box4">
-                        <h1>BOX 4</h1>
-                        <h2>row</h2>
-                    </div>
-                    <div class="box" id="box5"><h1>BOX 5</h1></div>
-                    <div class="box" id="box6"><h1>BOX 6</h1></div>
-                </div>
-                <div class="flex-container3">
-                    <div class="box" id="box4">
-                        <h1>BOX 7</h1>
-                        <h2>column</h2>
-                    </div>
-                    <div class="box" id="box5"><h1>BOX 8</h1></div>
-                    <div class="box" id="box6"><h1>BOX 9</h1></div>
+            <div>
+                <h2>Flex grow and flex shrink</h2>
+                <div class="flex-container">
+                    <div class="box" id="box1"><h1>BOX 1: grow 1</h1></div>
+                    <div class="box" id="box2"><h1>BOX 2: grow 2</h1></div>
+                    <div class="box" id="box3"><h1>BOX 3: shrink</h1></div>
                 </div>
             </div>
-            <div><h2>Justify-content</h2></div>
-            <div class="flex-container4" id="jcflex-start">
-                <div class="boxs"><h2>flex-start</h2></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
+            <div>
+                <h2>Flex-direction</h2>
+                <div class="container">
+                    <div id="fc2">
+                        <div class="flex-container2">
+                            <div class="box" id="box4">
+                                <h1>BOX 4</h1>
+                                <h2>row</h2>
+                            </div>
+                            <div class="box" id="box5"><h1>BOX 5</h1></div>
+                            <div class="box" id="box6"><h1>BOX 6</h1></div>
+                        </div>
+                        <div class="flex-container2" id="fc2rr">
+                            <div class="box" id="box4">
+                                <h1>BOX 4</h1>
+                                <h2>row reverse</h2>
+                            </div>
+                            <div class="box" id="box5"><h1>BOX 5</h1></div>
+                            <div class="box" id="box6"><h1>BOX 6</h1></div>
+                        </div>
+                    </div>
+                    <div class="flex-container3">
+                        <div class="box" id="box4">
+                            <h1>BOX 7</h1>
+                            <h2>column</h2>
+                        </div>
+                        <div class="box" id="box5"><h1>BOX 8</h1></div>
+                        <div class="box" id="box6"><h1>BOX 9</h1></div>
+                    </div>
+                    <div class="flex-container3" id="fc3cr">
+                        <div class="box" id="box4">
+                            <h1>BOX 7</h1>
+                            <h2>column reverse</h2>
+                        </div>
+                        <div class="box" id="box5"><h1>BOX 8</h1></div>
+                        <div class="box" id="box6"><h1>BOX 9</h1></div>
+                    </div>
+                </div>
             </div>
-            <div class="flex-container4" id="jcflex-end">
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"><h2>flex-end</h2></div>
+            <div>
+                <h2>Justify-content</h2>
+                <div class="flex-container4" id="jcflex-start">
+                    <div class="boxjc"><h2>flex-start</h2></div>
+                    <div class="boxjc"></div>
+                    <div class="boxjc"></div>
+                </div>
+                <div class="flex-container4" id="jcflex-end">
+                    <div class="boxjc"></div>
+                    <div class="boxjc"></div>
+                    <div class="boxjc"><h2>flex-end</h2></div>
+                </div>
+                <div class="flex-container4" id="jccenter">
+                    <div class="boxjc"></div>
+                    <div class="boxjc"><h2>center</h2></div>
+                    <div class="boxjc"></div>
+                </div>
+                <div class="flex-container4" id="jcspace-around">
+                    <div class="boxjc"><h2>space-around</h2></div>
+                    <div class="boxjc"></div>
+                    <div class="boxjc"></div>
+                </div>
+                <div class="flex-container4" id="jcspace-between">
+                    <div class="boxjc"><h2>space-between</h2></div>
+                    <div class="boxjc"></div>
+                    <div class="boxjc"></div>
+                </div>
             </div>
-            <div class="flex-container4" id="jccenter">
-                <div class="boxs"></div>
-                <div class="boxs"><h2>center</h2></div>
-                <div class="boxs"></div>
-            </div>
-            <div class="flex-container4" id="jcspace-around">
-                <div class="boxs"><h2>space-around</h2></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-            </div>
-            <div class="flex-container4" id="jcspace-between">
-                <div class="boxs"><h2>space-between</h2></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-            </div>
-            <div><h2>Align-content</h2></div>
-            <div class="flex-container5" id="acflex-start">
-                <div class="boxs"><h2>flex-start</h2></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-            </div>
-            <div class="flex-container5" id="acflex-end">
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"><h2>flex-end</h2></div>
-            </div>
-            <div class="flex-container5" id="accenter">
-                <div class="boxs"></div>
-                <div class="boxs"><h2>center</h2></div>
-                <div class="boxs"></div>
-            </div>
-            <div class="flex-container5" id="acspace-between">
-                <div class="boxs"><h2>space-between</h2></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-            </div>
-            <div class="flex-container5" id="acspace-around">
-                <div class="boxs"><h2>space-around</h2></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
-                <div class="boxs"></div>
+            <div>
+                <h2>Align-content</h2>
+                <div id="ac">
+                    <div class="flex-container5" id="acflex-start">
+                        <div class="boxac"><h2>flex-start</h2></div>
+                        <div class="boxac"></div>
+                        <div class="boxac"></div>
+                    </div>
+                    <div class="flex-container5" id="acflex-end">
+                        <div class="boxac"></div>
+                        <div class="boxac"></div>
+                        <div class="boxac"><h2>flex-end</h2></div>
+                    </div>
+                    <div class="flex-container5" id="accenter">
+                        <div class="boxac"></div>
+                        <div class="boxac"><h2>center</h2></div>
+                        <div class="boxac"></div>
+                    </div>
+                    <div class="flex-container5" id="acspace-between">
+                        <div class="boxac"><h2>space-between</h2></div>
+                        <div class="boxac"></div>
+                        <div class="boxac"></div>
+                    </div>
+                    <div class="flex-container5" id="acspace-around">
+                        <div class="boxac"><h2>space-around</h2></div>
+                        <div class="boxac"></div>
+                        <div class="boxac"></div>
+                    </div>
+                </div>
             </div>
         </main>
         </body>

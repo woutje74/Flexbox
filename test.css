@@ -16,11 +16,14 @@ body {
 .container {
     border: 1px solid darkgrey;
     background-color: rgb(247, 154, 89);
-    margin: 2% 5%;
+    margin: 0 5%;
+    padding: 10px;
     width: 90%;
+    min-width: fit-content;
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
+
 }
 .flex-container {
     border: 1px solid darkgrey;
@@ -33,15 +36,28 @@ body {
 }
 
 .flex-container2 {
-    border: 1px solid rgb(50, 22, 209);
+    border: 1px solid darkgrey;
     background-color: rgb(247, 154, 89);
-    width: auto; /*door geen height in te stellen, past de hoogte van de container zich aan, aan de hoogte van de flex-items; dmv % past het block zich aan aan de browser grootte*/
+    width: 90%; /*door geen height in te stellen, past de hoogte van de container zich aan, aan de hoogte van de flex-items; dmv % past het block zich aan aan de browser grootte*/
+    min-width: 370px;
     height: max-content; /*de hoogte van de container is niet meer dan nodig voor de inhoud */
     display: inline-flex; /*deze flex-container bestaat inline, er kunnen andere flex containers op deze regel verschijnen*/
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
+    margin: 2%;
     flex-direction: row; /*bepaalt in welke richting de flex-items in de container uitgelijnd worden*/
-    margin: 2% 2%; /*dit zijn de marges van de container*/
+    /*margin: auto; /*dit zijn de marges van de container*/
 }
+
+#fc2rr {
+    flex-direction: row-reverse;
+}
+
+#fc2 {
+    display: block;
+    margin: auto;
+
+}
+
 
 .flex-container3 {
     border: 1px solid darkgrey;
@@ -52,7 +68,11 @@ body {
     flex-direction: column; /* shorthand code voor wrap en direction is flex-flow: column wrap */
     margin: 2% 2%; 
     clear: both;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+#fc3cr {
+    flex-direction: column-reverse;
 }
 
 .box {
@@ -62,8 +82,9 @@ body {
     margin: 10px; /*dit creeert een marge van 10px rond de box items, bij gebruik van auto worden de flex items verdeeld over de flex-container. Als deze geen fixed width heeft, verdwijnen de marges bij gebruik van auto*/
     border: 2px solid red;
     background-color: rgb(50, 131, 252);
-    display: flex; /* alle flexitems in containers van de class .box kunnen op dezelfde regel verschijnen, voor zover er ruimte in de het parent element is*/
-    flex-wrap: wrap;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
 }
 
 #box1 {
@@ -81,23 +102,17 @@ body {
     flex-shrink: 1; /*flex-shrink hoeft alleen gedeclareerd te worden, als je een flex-item meer wilt laten krimpen dan de standaard waarde 1*/
 }
 
-#box4 {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
 
 .flex-container4 {
     width: 90%;
-    margin: 2% 5%;
+    margin: 2% auto;
     display: flex;
     border: 1px solid darkgrey;
     background-color: rgb(247, 154, 89);
     overflow: hidden;
-    justify-content: flex-start; /*werkt alleen wanneer de marges van de flex-items fixed zijn*/
 }
 
-.boxs {
+.boxjc {
     height: 100px;
     min-width: 100px;
     width: 20%;
@@ -128,15 +143,33 @@ body {
     justify-content: space-between;
 }
 
+#ac {
+    margin: 2% auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between; /*werkt op de uitlijning van de items binnen de container met id AC*/
+}
 .flex-container5 {
+    display: inline-flex;
     background-color: rgb(247, 154, 89);
     border: 1px solid darkgrey;
-    height: 350px;
-    width: 90%;
-    background-color: (247, 154, 89);
-    display: inline-flex;
+    min-height: 400px;
+    width: 18%;
+    margin: auto;
     flex-wrap: wrap;
+    overflow: hidden;
+    clear: both;
+  }
+
+.boxac {
+    height: 100px;
+    min-width: 100px;
+    width: 20%;
+    background-color: dodgerblue;
     margin: 2% auto;
+    border: 2px solid red;
+    align-items: center; /* gaat over de inhoud van de container*/
+    display: flex;
   }
 
 #acflex-start {
@@ -159,10 +192,14 @@ body {
     align-content: space-around;
 }
 
+
+
 .box h1,
  .box h2,
-  .boxs h1,
-   .boxs h2{
+  .boxjc h1,
+   .boxjc h2,
+    .boxac h1,
+     .boxac h2 {
     font-size: 1rem;
     margin: 0 auto;
 }
